@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+
+</head>
+<body>
+    <form id="loginForm">
+        <label for="login">Login:</label>
+        <input type="text" id="login" name="login" required>
+        <br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required>
+        <br>
+        <button type="button" onclick="verificarCampos()">Verificar Campos</button>
+    </form>
+
+    <p id="resultado"></p>
+    <script>
+        function verificarCampos() {
+            
+            const login = document.getElementById('login').value;
+            const senha = document.getElementById('senha').value;
+
+            if (login.trim() === '' || senha.trim() === '') {
+                document.getElementById('resultado').textContent = 'Por favor, preencha todos os campos.';
+            } else {
+                document.getElementById('resultado').textContent = 'Campos preenchidos corretamente.';
+            }
+        }
+    </script>
+</body>
+</html>
